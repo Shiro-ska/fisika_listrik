@@ -574,7 +574,7 @@
         </div>
     </div>
 
-    <!-- SLIDE 8: Contoh Soal Induktansi Diri (sebelumnya slide 9) -->
+    <!-- SLIDE 8: Contoh Soal Induktansi Diri -->
     <div class="slide-container" id="slide8">
         <h2 class="slide-title">Contoh Soal: Induktansi Diri</h2>
         <div class="content-area" style="justify-content: flex-start; overflow-y: auto; padding-right: 10px;">
@@ -731,12 +731,40 @@
         </div>
     </div>
 
+    <!-- SLIDE 15: Kunci Jawaban Lengkap (Soal 12, 13, 14) -->
+    <div class="slide-container" id="slide15">
+        <h2 class="slide-title">Kunci Jawaban Latihan Soal</h2>
+        <div class="content-area" style="justify-content: flex-start; overflow-y: auto;">
+            <div class="tile" style="margin-bottom: 30px;">
+                <h3>📌 Slide 12 - Soal 1, 2, 3</h3>
+                <p><strong>Soal 1:</strong> ε = N·ΔΦ/Δt = 100 × (0,04 / 0,2) = <strong>20 V</strong></p>
+                <p><strong>Soal 2:</strong> ε = L·|ΔI|/Δt = 3 × (6 / 0,1) = <strong>180 V</strong></p>
+                <p><strong>Soal 3:</strong> Medan listrik (E) dan medan magnet (B). Keempat persamaan Maxwell: Hukum Gauss listrik, Hukum Gauss magnet, Hukum Faraday, Hukum Ampere-Maxwell.</p>
+            </div>
+            <div class="tile" style="margin-bottom: 30px;">
+                <h3>📌 Slide 13 - Soal 4 (Fluks Magnetik)</h3>
+                <p><strong>Diketahui:</strong> A = 200 cm² = 0,02 m², B = 0,05 T</p>
+                <p>a. Tegak lurus (θ = 0°) → Φ = B·A = 0,05 × 0,02 = <strong>0,001 Wb</strong></p>
+                <p>b. Sudut 60° terhadap garis medan → θ = 60° → cos 60° = 0,5 → Φ = 0,05 × 0,02 × 0,5 = <strong>0,0005 Wb</strong></p>
+            </div>
+            <div class="tile">
+                <h3>📌 Slide 14 - Soal 5 (GGL Induksi Faraday)</h3>
+                <p><strong>Diketahui:</strong> Φ₁ = 0,08 Wb, Φ₂ = 0,02 Wb, Δt = 0,1 s, N = 200</p>
+                <p>|ΔΦ| = 0,06 Wb<br>ε = N·|ΔΦ|/Δt = 200 × (0,06 / 0,1) = <strong>120 V</strong></p>
+                <p><small>Tanda negatif diabaikan karena hanya menunjukkan arah (Hukum Lenz).</small></p>
+            </div>
+            <div class="section-title-layout" style="margin-top: 30px;">
+                <p style="color:#38bdf8;">✅ Semoga membantu! ✅</p>
+            </div>
+        </div>
+    </div>
+
     <!-- CONTROLS -->
     <div class="controls">
         <button class="control-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
         <button class="control-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
-    <div class="slide-counter" id="slideCounter">1 / 14</div>
+    <div class="slide-counter" id="slideCounter">1 / 15</div>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -768,27 +796,22 @@
             showSlide(currentSlide);
 
             // Toggle untuk berbagai solusi
-            // Contoh soal slide 4
             const toggleContoh4 = document.getElementById('toggleContoh4');
             const solusiContoh4 = document.getElementById('solusiContoh4');
             if (toggleContoh4 && solusiContoh4) toggleContoh4.addEventListener('change', () => solusiContoh4.classList.toggle('show', toggleContoh4.checked));
             
-            // Contoh soal slide 8
             const toggleContoh8 = document.getElementById('toggleContoh8');
             const solusiContoh8 = document.getElementById('solusiContoh8');
             if (toggleContoh8 && solusiContoh8) toggleContoh8.addEventListener('change', () => solusiContoh8.classList.toggle('show', toggleContoh8.checked));
 
-            // Kunci jawaban slide 12
             const toggleKunci = document.getElementById('toggleKunci123');
             const kunci123 = document.getElementById('kunci123');
             if (toggleKunci && kunci123) toggleKunci.addEventListener('change', () => kunci123.classList.toggle('show', toggleKunci.checked));
 
-            // Soal 4 slide 13
             const toggleSoal4 = document.getElementById('toggleSoal4');
             const solusiSoal4 = document.getElementById('solusiSoal4');
             if (toggleSoal4 && solusiSoal4) toggleSoal4.addEventListener('change', () => solusiSoal4.classList.toggle('show', toggleSoal4.checked));
 
-            // Soal 5 slide 14
             const toggleSoal5 = document.getElementById('toggleSoal5');
             const solusiSoal5 = document.getElementById('solusiSoal5');
             if (toggleSoal5 && solusiSoal5) toggleSoal5.addEventListener('change', () => solusiSoal5.classList.toggle('show', toggleSoal5.checked));
