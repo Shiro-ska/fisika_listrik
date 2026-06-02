@@ -18,7 +18,6 @@
 
         body {
             background-color: #020617;
-            /* Very Dark Navy */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -31,11 +30,9 @@
         .slide-container {
             align-items: center;
             background-color: #0f172a;
-            /* Slate Dark */
             border-radius: 12px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             display: none;
-            /* Hide by default */
             flex-direction: column;
             font-family: 'Lato', sans-serif;
             height: 720px;
@@ -47,7 +44,6 @@
             border: 1px solid #1e293b;
         }
 
-        /* BACKGROUND DESIGN ELEMENTS */
         .slide-container::before {
             content: '';
             position: absolute;
@@ -77,10 +73,7 @@
             z-index: 1;
         }
 
-        /* TYPOGRAPHY */
-        h1,
-        h2,
-        h3 {
+        h1, h2, h3 {
             color: #f8fafc;
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -98,15 +91,11 @@
             text-align: left;
             width: 100%;
             color: #38bdf8;
-            /* Electric Blue */
             border-left: 8px solid #38bdf8;
             padding-left: 20px;
         }
 
-        p,
-        li,
-        td,
-        th {
+        p, li, td, th {
             color: #cbd5e1;
             font-size: 22px;
             line-height: 1.6;
@@ -126,20 +115,12 @@
             width: 100%;
         }
 
-        /* LAYOUT SPECIFICS */
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
             width: 100%;
             align-items: center;
-        }
-
-        .tiled-content {
-            display: flex;
-            gap: 30px;
-            width: 100%;
-            justify-content: stretch;
         }
 
         .tile {
@@ -163,7 +144,6 @@
             margin-bottom: 20px;
         }
 
-        /* IMAGE WRAPPERS */
         .image-wrapper {
             border-radius: 16px;
             height: 400px;
@@ -179,7 +159,6 @@
             object-fit: cover;
         }
 
-        /* TABLES */
         .table-layout table {
             width: 100%;
             border-collapse: collapse;
@@ -188,8 +167,7 @@
             overflow: hidden;
         }
 
-        .table-layout th,
-        .table-layout td {
+        .table-layout th, .table-layout td {
             padding: 16px;
             text-align: left;
             border-bottom: 1px solid #334155;
@@ -201,7 +179,6 @@
             font-weight: 700;
         }
 
-        /* BULLETS */
         .bullet-list ul {
             list-style: none;
             padding: 0;
@@ -221,7 +198,6 @@
             font-size: 24px;
         }
 
-        /* FORMULAS */
         .formula-container {
             background: #020617;
             padding: 20px;
@@ -236,7 +212,6 @@
             color: #f8fafc;
         }
 
-        /* BAR CHART */
         .chart-container {
             width: 100%;
             display: flex;
@@ -276,7 +251,6 @@
             color: white;
         }
 
-        /* TOGGLE SLIDER */
         .toggle-wrapper {
             display: flex;
             align-items: center;
@@ -344,7 +318,6 @@
             display: block;
         }
 
-        /* SECTION TITLES */
         .section-title-layout {
             text-align: center;
         }
@@ -361,7 +334,6 @@
             font-size: 80px;
         }
 
-        /* BLEED IMAGE */
         .bleed-image-layout {
             padding: 0;
             align-items: start;
@@ -386,7 +358,6 @@
             object-fit: cover;
         }
 
-        /* PRESENTATION STYLES */
         .slide-container.active-slide {
             display: flex;
             animation: fadeIn 0.4s ease-out forwards;
@@ -397,7 +368,6 @@
                 opacity: 0;
                 transform: scale(0.95);
             }
-
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -459,7 +429,6 @@
             border: 1px solid #1e293b;
         }
 
-        /* Fallback untuk gambar tidak ditemukan */
         img {
             background-color: #0f172a;
         }
@@ -476,7 +445,7 @@
         </div>
     </div>
 
-    <!-- SLIDE 2: Hukum Faraday & Lenz (judul) -->
+    <!-- SLIDE 2: Hukum Faraday & Lenz -->
     <div class="slide-container" id="slide2">
         <div class="section-title-layout">
             <hr>
@@ -492,33 +461,16 @@
                 <div class="tile">
                     <div class="icon"><i class="fa-solid fa-bolt"></i></div>
                     <h3>Hukum Faraday</h3>
-                    <p>Gaya Gerak Listrik (GGL) induksi timbul jika fluks magnetik yang menembus kumparan berubah
-                        terhadap waktu.</p>
+                    <p>GGL induksi timbul jika fluks magnetik berubah terhadap waktu.</p>
                     <div class="formula-container">
-                        <math display="math">
-                            <mi>ε</mi>
-                            <mo>=</mo>
-                            <mo>−</mo>
-                            <mi>N</mi>
-                            <mfrac>
-                                <mrow>
-                                    <mi>d</mi>
-                                    <mi>Φ</mi>
-                                </mrow>
-                                <mrow>
-                                    <mi>d</mi>
-                                    <mi>t</mi>
-                                </mrow>
-                            </mfrac>
-                        </math>
+                        <math><mi>ε</mi><mo>=</mo><mo>−</mo><mi>N</mi><mfrac><mrow><mi>d</mi><mi>Φ</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math>
                     </div>
                 </div>
                 <div class="tile">
                     <div class="icon"><i class="fa-solid fa-compass"></i></div>
                     <h3>Hukum Lenz</h3>
-                    <p>Arah arus induksi sedemikian rupa sehingga medan magnetnya melawan perubahan fluks penyebabnya.
-                    </p>
-                    <p><em>"Alam cenderung mempertahankan keadaannya (inersia magnetik)."</em></p>
+                    <p>Arah arus induksi melawan perubahan fluks penyebabnya.</p>
+                    <p><em>"Alam cenderung mempertahankan keadaannya."</em></p>
                 </div>
             </div>
         </div>
@@ -530,61 +482,37 @@
         <div class="content-area" style="justify-content: flex-start; overflow-y: auto; padding-right: 10px;">
             <div class="table-layout">
                 <table>
-                    <thead>
-                        <tr>
-                            <th>Variabel Diketahui</th>
-                            <th>Nilai</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th>Variabel Diketahui</th><th>Nilai</th></tr></thead>
                     <tbody>
-                        <tr>
-                            <td>Jumlah Lilitan (N)</td>
-                            <td>50 lilitan</td>
-                        </tr>
-                        <tr>
-                            <td>Perubahan Fluks (&Delta;&Phi;)</td>
-                            <td>5 x 10<sup>-3</sup> Weber</td>
-                        </tr>
-                        <tr>
-                            <td>Selang Waktu (&Delta;t)</td>
-                            <td>10 ms (0.01 s)</td>
-                        </tr>
+                        <tr><td>Jumlah Lilitan (N)</td><td>50 lilitan</td></tr>
+                        <tr><td>Perubahan Fluks (&Delta;&Phi;)</td><td>5 x 10<sup>-3</sup> Weber</td></tr>
+                        <tr><td>Selang Waktu (&Delta;t)</td><td>10 ms (0.01 s)</td></tr>
                     </tbody>
                 </table>
             </div>
             <div class="toggle-wrapper">
-                <label class="switch">
-                    <input type="checkbox"
-                        onchange="document.getElementById('solution4').classList.toggle('show', this.checked)">
-                    <span class="slider"></span>
-                </label>
+                <label class="switch"><input type="checkbox" onchange="document.getElementById('solution4').classList.toggle('show', this.checked)"><span class="slider"></span></label>
                 <span class="toggle-label">Tampilkan Penyelesaian</span>
             </div>
             <div class="tile solution-content" id="solution4" style="margin-top: 20px;">
                 <h3>Penyelesaian:</h3>
-                <p>&epsilon; = -N (&Delta;&Phi; / &Delta;t) = -50 (5 x 10<sup>-3</sup> / 0.01) = <strong>-25
-                        Volt</strong></p>
+                <p>&epsilon; = -N (&Delta;&Phi; / &Delta;t) = -50 (5 x 10<sup>-3</sup> / 0.01) = <strong>-25 Volt</strong></p>
                 <p><small>*Tanda negatif menunjukkan arah berdasarkan hukum Lenz.</small></p>
             </div>
         </div>
     </div>
 
-    <!-- SLIDE 5: Visualisasi Percobaan (bleed image) -->
+    <!-- SLIDE 5: Visualisasi Percobaan -->
     <div class="slide-container bleed-image-layout" id="slide5">
         <div class="content-container">
             <h2 class="slide-title">Visualisasi Percobaan</h2>
-            <p>Gambar di samping menunjukkan bagaimana magnet yang digerakkan mendekati atau menjauhi kumparan akan
-                menghasilkan lonjakan arus listrik pada Galvanometer.</p>
+            <p>Magnet yang digerakkan mendekati/menjauhi kumparan menghasilkan lonjakan arus pada Galvanometer.</p>
             <p><strong>Faktor yang mempengaruhi GGL:</strong></p>
-            <ul>
-                <li>Kecepatan gerak magnet</li>
-                <li>Kekuatan magnet</li>
-                <li>Jumlah lilitan kumparan</li>
-            </ul>
+            <ul><li>Kecepatan gerak magnet</li><li>Kekuatan magnet</li><li>Jumlah lilitan kumparan</li></ul>
         </div>
         <div class="image-container">
             <img src="faraday.png" alt="Faraday Experiment" 
-                 onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22100%25%22%20height=%22100%25%22%20viewBox=%220%200%20100%20100%22%3E%3Crect%20width=%22100%25%22%20height=%22100%25%22%20fill=%22%23334155%22/%3E%3Ctext%20x=%2250%25%22%20y=%2250%25%22%20dominant-baseline=%22middle%22%20text-anchor=%22middle%22%20fill=%22%2394a3b8%22%20font-size=%2214%22%3EFaraday.png%20not%20found%3C/text%3E%3C/svg%3E';">
+                 onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22100%25%22%20height=%22100%25%22%20viewBox=%220%200%20100%20100%22%3E%3Crect%20width=%22100%25%22%20height=%22100%25%22%20fill=%22%23334155%22/%3E%3Ctext%20x=%2250%25%22%20y=%2250%25%22%20dominant-baseline=%22middle%22%20text-anchor=%22middle%22%20fill=%22%2394a3b8%22%20font-size=%2214%22%3Efaraday.png%20not%20found%3C/text%3E%3C/svg%3E';">
         </div>
     </div>
 
@@ -596,203 +524,152 @@
         </div>
     </div>
 
-    <!-- SLIDE 7: Induktansi Diri & Silang -->
+    <!-- SLIDE 7: Induktansi Diri -->
     <div class="slide-container" id="slide7">
-        <h2 class="slide-title">Induktansi Diri & Silang</h2>
+        <h2 class="slide-title">Induktansi Diri</h2>
         <div class="content-area">
             <div class="two-column">
                 <div>
                     <h3>Induktansi Diri (L)</h3>
-                    <p>Sifat kumparan yang menghasilkan GGL induksi di dalam dirinya sendiri akibat perubahan arus.</p>
+                    <p>Sifat kumparan menghasilkan GGL induksi di dalam dirinya akibat perubahan arus.</p>
                     <div class="formula-container">
-                        <math display="math">
-                            <mi>L</mi>
-                            <mo>=</mo>
-                            <mfrac>
-                                <mrow>
-                                    <mi>N</mi>
-                                    <mi>Φ</mi>
-                                </mrow>
-                                <mi>I</mi>
-                            </mfrac>
-                            <mtext>&nbsp;&nbsp;dan&nbsp;&nbsp;</mtext>
-                            <mi>ε</mi>
-                            <mo>=</mo>
-                            <mo>−</mo>
-                            <mi>L</mi>
-                            <mfrac>
-                                <mrow>
-                                    <mi>d</mi>
-                                    <mi>I</mi>
-                                </mrow>
-                                <mrow>
-                                    <mi>d</mi>
-                                    <mi>t</mi>
-                                </mrow>
-                            </mfrac>
-                        </math>
+                        <math><mi>L</mi><mo>=</mo><mfrac><mrow><mi>N</mi><mi>Φ</mi></mrow><mi>I</mi></mfrac><mtext>&nbsp;&nbsp;dan&nbsp;&nbsp;</mtext><mi>ε</mi><mo>=</mo><mo>−</mo><mi>L</mi><mfrac><mrow><mi>d</mi><mi>I</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math>
                     </div>
                 </div>
                 <div class="image-wrapper">
-                    <img src="inductor.jpeg" alt="Inductor Component"
+                    <img src="inductor.jpeg" alt="Induktor"
                          onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22100%25%22%20height=%22100%25%22%20viewBox=%220%200%20100%20100%22%3E%3Crect%20width=%22100%25%22%20height=%22100%25%22%20fill=%22%23334155%22/%3E%3Ctext%20x=%2250%25%22%20y=%2250%25%22%20dominant-baseline=%22middle%22%20text-anchor=%22middle%22%20fill=%22%2394a3b8%22%20font-size=%2214%22%3Einductor.jpeg%20not%20found%3C/text%3E%3C/svg%3E';">
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- SLIDE 8: Contoh Soal Induktansi Diri -->
+    <!-- SLIDE 8: INDUCTANSI SILANG (MUTUAL INDUCTANCE) - BARU -->
     <div class="slide-container" id="slide8">
-        <h2 class="slide-title">Contoh Soal: Induktansi Diri</h2>
-        <div class="content-area" style="justify-content: flex-start; overflow-y: auto; padding-right: 10px;">
-            <div class="chart-container">
-                <p style="margin-bottom: 20px;">Sebuah induktor memiliki induktansi <strong>2 H</strong>. Jika arus
-                    berubah dari <strong>10 A</strong> menjadi <strong>2 A</strong> dalam waktu <strong>0.1 s</strong>,
-                    berapakah GGL induksi yang dihasilkan?</p>
-                <div class="bar">
-                    <div class="label">Induktansi (L)</div>
-                    <div class="bar-inner">
-                        <div class="bar-fill" style="width: 40%;">2 Henry</div>
+        <h2 class="slide-title">Induktansi Silang (Mutual Inductance)</h2>
+        <div class="content-area">
+            <div class="two-column">
+                <div>
+                    <p>Induktansi silang terjadi ketika perubahan arus pada suatu kumparan menginduksi GGL pada kumparan lain yang berada di dekatnya.</p>
+                    <div class="formula-container">
+                        <math><msub><mi>ε</mi><mn>2</mn></msub><mo>=</mo><mo>−</mo><msub><mi>M</mi><mrow><mn>21</mn></mrow></msub><mfrac><mrow><mi>d</mi><msub><mi>I</mi><mn>1</mn></msub></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math>
+                        <p style="font-size:1rem; margin-top:10px;">dengan <strong>M</strong> = induktansi silang (Henry)</p>
                     </div>
+                    <p><strong>Faktor yang mempengaruhi M:</strong></p>
+                    <ul>
+                        <li>Jumlah lilitan kedua kumparan (N₁, N₂)</li>
+                        <li>Luas penampang dan panjang inti bersama</li>
+                        <li>Permeabilitas inti magnetik</li>
+                        <li>Jarak dan orientasi antar kumparan</li>
+                    </ul>
                 </div>
-                <div class="bar">
-                    <div class="label">Perubahan Arus</div>
-                    <div class="bar-inner">
-                        <div class="bar-fill" style="width: 80%;">8 Ampere</div>
-                    </div>
-                </div>
-                <div class="toggle-wrapper">
-                    <label class="switch">
-                        <input type="checkbox"
-                            onchange="document.getElementById('solution8').classList.toggle('show', this.checked)">
-                        <span class="slider"></span>
-                    </label>
-                    <span class="toggle-label">Tampilkan Hasil Perhitungan</span>
-                </div>
-                <div class="tile solution-content" id="solution8" style="margin-top: 20px;">
-                    <h3>Hasil Perhitungan:</h3>
-                    <p>&epsilon; = -L (&Delta;I / &Delta;t) = -2 ( (2 - 10) / 0.1 ) = -2 (-80) = <strong>160
-                            Volt</strong></p>
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-arrows-spin"></i></div>
+                    <h3>Rumus & Koefisien Kopling</h3>
+                    <p><math><mi>M</mi><mo>=</mo><mi>k</mi><msqrt><mrow><msub><mi>L</mi><mn>1</mn></msub><msub><mi>L</mi><mn>2</mn></msub></mrow></msqrt></math></p>
+                    <p><em>k = koefisien kopling (0 ≤ k ≤ 1)</em></p>
+                    <p style="margin-top:15px;">Contoh: Transformator memanfaatkan induktansi silang untuk menaikkan/menurunkan tegangan.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- SLIDE 9: Persamaan Maxwell & Gelombang EM -->
+    <!-- SLIDE 9: Contoh Soal Induktansi Diri -->
     <div class="slide-container" id="slide9">
+        <h2 class="slide-title">Contoh Soal: Induktansi Diri</h2>
+        <div class="content-area" style="justify-content: flex-start; overflow-y: auto; padding-right: 10px;">
+            <div class="chart-container">
+                <p>Induktor L=2 H, arus berubah dari 10 A menjadi 2 A dalam 0.1 s. Hitung GGL induksi.</p>
+                <div class="bar"><div class="label">Induktansi (L)</div><div class="bar-inner"><div class="bar-fill" style="width:40%;">2 H</div></div></div>
+                <div class="bar"><div class="label">Perubahan Arus</div><div class="bar-inner"><div class="bar-fill" style="width:80%;">8 A</div></div></div>
+                <div class="toggle-wrapper">
+                    <label class="switch"><input type="checkbox" onchange="document.getElementById('solution8').classList.toggle('show', this.checked)"><span class="slider"></span></label>
+                    <span class="toggle-label">Tampilkan Hasil Perhitungan</span>
+                </div>
+                <div class="tile solution-content" id="solution8" style="margin-top:20px;">
+                    <h3>Hasil Perhitungan:</h3>
+                    <p>&epsilon; = -L (&Delta;I / &Delta;t) = -2 ((2-10)/0.1) = -2(-80) = <strong>160 Volt</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 10: Persamaan Maxwell & Gelombang EM -->
+    <div class="slide-container" id="slide10">
         <div class="section-title-layout">
             <hr>
             <h2>Persamaan Maxwell & Gelombang EM</h2>
         </div>
     </div>
 
-    <!-- SLIDE 10: Empat Pilar Elektrodinamika -->
-    <div class="slide-container" id="slide10">
+    <!-- SLIDE 11: Empat Pilar Elektrodinamika -->
+    <div class="slide-container" id="slide11">
         <h2 class="slide-title">Empat Pilar Elektrodinamika</h2>
         <div class="content-area">
             <div class="two-column">
-                <div class="image-wrapper" style="height: 500px;">
-                    <img src="jcm.jpg" alt="James Clerk Maxwell"
+                <div class="image-wrapper" style="height:500px;">
+                    <img src="jcm.jpg" alt="Maxwell"
                          onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22100%25%22%20height=%22100%25%22%20viewBox=%220%200%20100%20100%22%3E%3Crect%20width=%22100%25%22%20height=%22100%25%22%20fill=%22%23334155%22/%3E%3Ctext%20x=%2250%25%22%20y=%2250%25%22%20dominant-baseline=%22middle%22%20text-anchor=%22middle%22%20fill=%22%2394a3b8%22%20font-size=%2214%22%3Ejcm.jpg%20not%20found%3C/text%3E%3C/svg%3E';">
                 </div>
                 <div class="bullet-list">
                     <ul>
-                        <li><i class="fa-solid fa-shield-halved"></i> <strong>Hukum Gauss (E):</strong> Fluks listrik
-                            melalui permukaan tertutup.</li>
-                        <li><i class="fa-solid fa-magnet"></i> <strong>Hukum Gauss (B):</strong> Tidak ada monopol
-                            magnetik.</li>
-                        <li><i class="fa-solid fa-rotate"></i> <strong>Hukum Faraday:</strong> Perubahan fluks magnetik
-                            menghasilkan medan listrik.</li>
-                        <li><i class="fa-solid fa-wave-square"></i> <strong>Hukum Ampere-Maxwell:</strong> Arus dan
-                            perubahan fluks listrik menghasilkan medan magnet.</li>
+                        <li><i class="fa-solid fa-shield-halved"></i> Hukum Gauss (E): Fluks listrik</li>
+                        <li><i class="fa-solid fa-magnet"></i> Hukum Gauss (B): Tidak ada monopol magnetik</li>
+                        <li><i class="fa-solid fa-rotate"></i> Hukum Faraday: Perubahan fluks magnetik → medan listrik</li>
+                        <li><i class="fa-solid fa-wave-square"></i> Hukum Ampere-Maxwell: Arus & perubahan fluks listrik → medan magnet</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- SLIDE 11: Karakteristik Gelombang EM -->
-    <div class="slide-container" id="slide11">
+    <!-- SLIDE 12: Karakteristik Gelombang EM -->
+    <div class="slide-container" id="slide12">
         <h2 class="slide-title">Karakteristik Gelombang EM</h2>
         <div class="content-area">
             <div class="two-column">
                 <div>
-                    <div class="image-wrapper" style="height: 300px; background-color: white;">
-                        <img src="wave.jpeg" alt="EM Wave Propagation"
+                    <div class="image-wrapper" style="height:300px; background-color:white;">
+                        <img src="wave.jpeg" alt="Gelombang EM"
                              onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22100%25%22%20height=%22100%25%22%20viewBox=%220%200%20100%20100%22%3E%3Crect%20width=%22100%25%22%20height=%22100%25%22%20fill=%22%23334155%22/%3E%3Ctext%20x=%2250%25%22%20y=%2250%25%22%20dominant-baseline=%22middle%22%20text-anchor=%22middle%22%20fill=%22%2394a3b8%22%20font-size=%2214%22%3Ewave.jpeg%20not%20found%3C/text%3E%3C/svg%3E';"
-                             style="object-fit: contain; padding: 10px;">
+                             style="object-fit:contain; padding:10px;">
                     </div>
-                    <p style="margin-top:20px;">Gelombang transversal yang terdiri dari osilasi medan listrik dan medan
-                        magnet yang saling tegak lurus.</p>
+                    <p>Gelombang transversal: medan listrik dan magnet saling tegak lurus.</p>
                 </div>
                 <div class="tile">
                     <h3>Cepat Rambat (c)</h3>
                     <div class="formula-container">
-                        <math display="math">
-                            <mi>c</mi>
-                            <mo>=</mo>
-                            <mfrac>
-                                <mn>1</mn>
-                                <msqrt>
-                                    <mrow>
-                                        <msub>
-                                            <mi>μ</mi>
-                                            <mn>0</mn>
-                                        </msub>
-                                        <msub>
-                                            <mi>ε</mi>
-                                            <mn>0</mn>
-                                        </msub>
-                                    </mrow>
-                                </msqrt>
-                            </mfrac>
-                            <mo>≈</mo>
-                            <mn>3</mn>
-                            <mo>×</mo>
-                            <msup>
-                                <mn>10</mn>
-                                <mn>8</mn>
-                            </msup>
-                            <mtext>m/s</mtext>
-                        </math>
+                        <math><mi>c</mi><mo>=</mo><mfrac><mn>1</mn><msqrt><msub><mi>μ</mi><mn>0</mn></msub><msub><mi>ε</mi><mn>0</mn></msub></msqrt></mfrac><mo>≈</mo><mn>3</mn><mo>×</mo><msup><mn>10</mn><mn>8</mn></msup><mtext> m/s</mtext></math>
                     </div>
-                    <p>Kecepatan konstan di ruang hampa, tidak membutuhkan medium rambat.</p>
+                    <p>Kecepatan konstan di ruang hampa, tidak butuh medium.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- SLIDE 12: Latihan Soal -->
-    <div class="slide-container" id="slide12">
+    <!-- SLIDE 13: Latihan Soal -->
+    <div class="slide-container" id="slide13">
         <h2 class="slide-title">Latihan Soal (Untuk Teman-teman)</h2>
         <div class="content-area">
             <div class="bullet-list">
                 <ul>
-                    <li><i class="fa-solid fa-question-circle"></i> <strong>Soal 1:</strong> Sebuah kumparan dengan 100
-                        lilitan mengalami perubahan fluks magnetik sebesar 4 x 10<sup>-2</sup> Weber dalam waktu 0.2
-                        detik. Berapakah besar GGL induksi yang timbul berdasarkan Hukum Faraday?</li>
-                    <li><i class="fa-solid fa-question-circle"></i> <strong>Soal 2:</strong> Sebuah induktor memiliki
-                        induktansi diri 3 H. Jika arus listrik yang mengalir berubah dari 8 A menjadi 2 A dalam waktu
-                        0.1 detik, berapakah GGL induksi yang dihasilkan?</li>
-                    <li><i class="fa-solid fa-question-circle"></i> <strong>Soal 3:</strong> Sebutkan dua medan yang
-                        berosilasi saling tegak lurus membentuk gelombang elektromagnetik, dan sebutkan keempat hukum
-                        yang menjadi pilar (Persamaan Maxwell)!</li>
+                    <li><i class="fa-solid fa-question-circle"></i> <strong>Soal 1:</strong> Kumparan 100 lilitan, perubahan fluks 4×10<sup>-2</sup> Wb dalam 0.2 s. Hitung GGL induksi.</li>
+                    <li><i class="fa-solid fa-question-circle"></i> <strong>Soal 2:</strong> Induktor 3 H, arus berubah dari 8 A ke 2 A dalam 0.1 s. Hitung GGL.</li>
+                    <li><i class="fa-solid fa-question-circle"></i> <strong>Soal 3:</strong> Sebutkan dua medan yang berosilasi pada gelombang EM dan keempat persamaan Maxwell!</li>
                 </ul>
             </div>
-            <div class="section-title-layout" style="margin-top: 40px;">
-                <p style="color: #38bdf8; font-weight: bold;">Kelompok Ody Billy</p>
+            <div class="section-title-layout" style="margin-top:40px;">
+                <p style="color:#38bdf8; font-weight:bold;">Kelompok Ody Billy</p>
             </div>
         </div>
     </div>
 
-    <!-- PRESENTATION CONTROLS -->
+    <!-- CONTROLS -->
     <div class="controls">
-        <button class="control-btn" id="prevBtn" title="Previous Slide (Left Arrow)"><i
-                class="fa-solid fa-chevron-left"></i></button>
-        <button class="control-btn" id="nextBtn" title="Next Slide (Right Arrow/Space)"><i
-                class="fa-solid fa-chevron-right"></i></button>
+        <button class="control-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="control-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
-    <div class="slide-counter" id="slideCounter">1 / 12</div>
+    <div class="slide-counter" id="slideCounter">1 / 13</div>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -805,45 +682,22 @@
             function showSlide(index) {
                 slides.forEach((slide, i) => {
                     slide.classList.remove('active-slide');
-                    if (i === index) {
-                        slide.classList.add('active-slide');
-                    }
+                    if (i === index) slide.classList.add('active-slide');
                 });
-
                 slideCounter.textContent = `${index + 1} / ${slides.length}`;
-
                 prevBtn.disabled = index === 0;
                 nextBtn.disabled = index === slides.length - 1;
             }
 
-            function nextSlide() {
-                if (currentSlide < slides.length - 1) {
-                    currentSlide++;
-                    showSlide(currentSlide);
-                }
-            }
-
-            function prevSlide() {
-                if (currentSlide > 0) {
-                    currentSlide--;
-                    showSlide(currentSlide);
-                }
-            }
+            function nextSlide() { if (currentSlide < slides.length - 1) { currentSlide++; showSlide(currentSlide); } }
+            function prevSlide() { if (currentSlide > 0) { currentSlide--; showSlide(currentSlide); } }
 
             nextBtn.addEventListener('click', nextSlide);
             prevBtn.addEventListener('click', prevSlide);
-
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowRight' || e.key === ' ') {
-                    e.preventDefault();
-                    nextSlide();
-                } else if (e.key === 'ArrowLeft') {
-                    e.preventDefault();
-                    prevSlide();
-                }
+                if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+                else if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
             });
-
-            // Initialize first slide
             showSlide(currentSlide);
         });
     </script>
