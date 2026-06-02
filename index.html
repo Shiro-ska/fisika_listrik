@@ -2,9 +2,10 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Fisika Listrik - Konsep Dasar Kelistrikan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisika Listrik - Presentasi</title>
     <style>
+        /* Gaya presentasi sederhana seperti slide */
         * {
             margin: 0;
             padding: 0;
@@ -12,243 +13,246 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
-            color: #1a2a3a;
-            line-height: 1.6;
-            padding: 20px;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            background: #e6e9ef;
+            line-height: 1.5;
+            padding: 40px 20px;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Container seperti slide presentasi */
+        .slide {
+            max-width: 1000px;
+            margin: 0 auto 30px auto;
             background: white;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
-            padding: 30px 40px;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2);
+            padding: 40px 48px;
+            transition: transform 0.2s;
         }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
+        @media (max-width: 700px) {
+            .slide {
+                padding: 24px 20px;
             }
         }
 
+        /* Judul utama seperti judul slide */
         h1 {
-            font-size: 2.5rem;
-            color: #0b3b5f;
-            border-left: 6px solid #ff8c42;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0a2b3e;
+            margin-bottom: 16px;
+            border-left: 7px solid #f39c12;
             padding-left: 20px;
-            margin-bottom: 20px;
-            margin-top: 0;
         }
 
         h2 {
-            font-size: 1.8rem;
-            color: #1e5a7d;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #ffaa66;
+            font-size: 1.9rem;
+            font-weight: 600;
+            color: #1c5a7a;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            border-bottom: 2px solid #f0d5a8;
             padding-bottom: 6px;
         }
 
         h3 {
             font-size: 1.4rem;
+            font-weight: 600;
             color: #2c6e9e;
-            margin: 20px 0 10px 0;
+            margin: 24px 0 12px 0;
         }
 
-        p {
-            margin-bottom: 16px;
-            text-align: justify;
+        p, li {
+            font-size: 1.05rem;
+            color: #1e2f3a;
+            margin-bottom: 12px;
         }
 
-        .intro {
-            background: #eef4ff;
-            padding: 20px;
-            border-radius: 20px;
-            margin: 20px 0;
-            font-style: italic;
-            border-left: 5px solid #ff8c42;
+        ul, ol {
+            margin: 16px 0 16px 32px;
         }
 
-        .image-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-            margin: 40px 0;
+        /* Gambar dengan gaya presentasi */
+        .figure {
+            text-align: center;
+            margin: 30px 0;
+            background: #fafcfd;
+            padding: 16px;
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
-        .card {
-            background: #ffffff;
+        .figure img {
+            max-width: 100%;
+            height: auto;
             border-radius: 20px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            overflow: hidden;
-            flex: 1 1 280px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #f0f2f5;
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 32px rgba(0,0,0,0.15);
+        .figcaption {
+            font-size: 0.9rem;
+            color: #4a627a;
+            margin-top: 12px;
+            font-style: italic;
         }
 
-        .card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-            background-color: #f0f2f5;
-        }
-
-        .card .caption {
-            padding: 15px;
-            background: #fef9f0;
-            font-weight: bold;
-            text-align: center;
-            color: #0b3b5f;
-        }
-
-        .formula {
-            background: #f0f4f8;
-            padding: 12px 18px;
-            border-radius: 16px;
+        /* Rumus dan blok kutipan */
+        .formula-block {
+            background: #f1f6fd;
+            padding: 16px 20px;
+            border-radius: 20px;
             font-family: 'Courier New', monospace;
             font-size: 1.2rem;
             text-align: center;
-            margin: 20px 0;
-            border: 1px solid #cbdbe0;
+            margin: 24px 0;
+            border-left: 5px solid #f39c12;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin: 24px 0;
             background: white;
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
+            border: 1px solid #cfdfed;
+            padding: 12px 16px;
             text-align: left;
+            vertical-align: top;
         }
 
         th {
-            background-color: #1e5a7d;
+            background: #1e5a7d;
             color: white;
             font-weight: 600;
         }
 
         tr:nth-child(even) {
-            background-color: #f9f9fc;
+            background-color: #f8fafc;
         }
 
         footer {
-            margin-top: 50px;
             text-align: center;
-            font-size: 0.85rem;
-            color: #6c7a89;
-            border-top: 1px solid #dce3ec;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #5d6f83;
+            border-top: 1px solid #cbdbe2;
             padding-top: 20px;
         }
 
+        /* responsif gambar */
         @media (max-width: 600px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-            h2 {
-                font-size: 1.4rem;
-            }
-            .card img {
-                height: 180px;
-            }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .formula-block { font-size: 0.95rem; }
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>⚡ Fisika Listrik</h1>
-    <div class="intro">
-        <strong>Listrik</strong> adalah fenomena fisika yang melibatkan muatan listrik diam atau bergerak. 
-        Dari percikan statis hingga sistem kelistrikan modern, pemahaman tentang listrik menjadi fondasi teknologi masa kini.
-    </div>
-
-    <h2>🔍 Tokoh & Eksperimen Penting</h2>
-    <div class="image-grid">
-        <!-- Gambar 1: Eksperimen Faraday -->
-        <div class="card">
-            <img src="faraday.png" alt="Eksperimen Faraday" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x220?text=Gambar+Faraday+Tidak+Ditemukan';">
-            <div class="caption">⚙️ Eksperimen Faraday - Induksi Elektromagnetik</div>
-        </div>
-        <!-- Gambar 2: Induktor -->
-        <div class="card">
-            <img src="inductor.jpeg" alt="Komponen Induktor" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x220?text=Induktor+Tidak+Ditemukan';">
-            <div class="caption">🧲 Induktor - Komponen penyimpan energi magnetik</div>
-        </div>
-        <!-- Gambar 3: James Clerk Maxwell -->
-        <div class="card">
-            <img src="jcm.jpg" alt="James Clerk Maxwell" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x220?text=Maxwell+Tidak+Ditemukan';">
-            <div class="caption">📜 James Clerk Maxwell - Persamaan Maxwell</div>
+    <!-- SLIDE 1: Judul Utama -->
+    <div class="slide">
+        <h1>⚡ Fisika Listrik</h1>
+        <p style="font-size:1.2rem; color:#2c5a74;">Konsep dasar kelistrikan, tokoh penting, dan aplikasi dalam kehidupan sehari-hari</p>
+        <div class="figure">
+            <!-- Gambar utama: bisa pilih faraday atau lainnya, saya letakkan faraday sebagai ilustrasi -->
+            <img src="faraday.png" alt="Eksperimen Faraday" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x300?text=Gambar+Faraday';">
+            <div class="figcaption">Gambar 1: Eksperimen Faraday tentang induksi elektromagnetik</div>
         </div>
     </div>
 
-    <h2>📐 Konsep Dasar Kelistrikan</h2>
-    <p>
-        Listrik menjelaskan interaksi muatan listrik. <strong>Hukum Coulomb</strong> menyatakan bahwa gaya antara dua muatan sebanding dengan hasil kali muatan dan berbanding terbalik dengan kuadrat jarak.
-        <br>Sedangkan <strong>Hukum Ohm</strong> menjadi fondasi rangkaian listrik: \( V = I \times R \) (Tegangan = Arus × Hambatan).
-    </p>
-
-    <div class="formula">
-        ⚡ V = I · R &nbsp;&nbsp;|&nbsp;&nbsp; P = V · I &nbsp;&nbsp;|&nbsp;&nbsp; Hukum Kirchhoff: Σ I masuk = Σ I keluar
+    <!-- SLIDE 2: Tokoh & Eksperimen Penting -->
+    <div class="slide">
+        <h2>🔍 Tokoh & Eksperimen Penting</h2>
+        <div class="figure">
+            <img src="faraday.png" alt="Michael Faraday" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x250?text=Faraday';">
+            <div class="figcaption">Michael Faraday – penemu induksi elektromagnetik</div>
+        </div>
+        <div class="figure">
+            <img src="inductor.jpeg" alt="Komponen Induktor" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x250?text=Induktor';">
+            <div class="figcaption">Induktor – komponen penyimpan energi dalam medan magnet</div>
+        </div>
+        <div class="figure">
+            <img src="jcm.jpg" alt="James Clerk Maxwell" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x250?text=Maxwell';">
+            <div class="figcaption">James Clerk Maxwell – menyatukan listrik, magnet, dan optik</div>
+        </div>
     </div>
 
-    <h2>🔌 Rangkaian Listrik</h2>
-    <p>
-        Dalam rangkaian seri, arus yang mengalir sama di setiap komponen, sedangkan tegangan terbagi. 
-        Pada rangkaian paralel, tegangan sama di setiap cabang, namun arus terbagi sesuai hambatan masing-masing.
-    </p>
+    <!-- SLIDE 3: Konsep Dasar & Hukum -->
+    <div class="slide">
+        <h2>📐 Konsep Dasar Kelistrikan</h2>
+        <p><strong>Hukum Coulomb</strong> : Gaya antara dua muatan berbanding lurus dengan hasil kali muatan dan berbanding terbalik dengan kuadrat jarak.</p>
+        <p><strong>Hukum Ohm</strong> : Tegangan (V) = Arus (I) × Hambatan (R).</p>
+        <div class="formula-block">
+            V = I · R   &nbsp;&nbsp;|&nbsp;&nbsp;   P = V · I   &nbsp;&nbsp;|&nbsp;&nbsp;   Hukum Kirchhoff: Σ I<sub>masuk</sub> = Σ I<sub>keluar</sub>
+        </div>
+    </div>
 
-    <h3>Perbandingan Rangkaian Seri dan Paralel</h3>
-    <table>
-        <thead>
-            <tr><th>Karakteristik</th><th>Rangkaian Seri</th><th>Rangkaian Paralel</th></tr>
-        </thead>
-        <tbody>
-            <tr><td>Arus (I)</td><td>Sama di semua komponen</td><td>Terbagi sesuai hambatan</td></tr>
-            <tr><td>Tegangan (V)</td><td>Terbagi proporsional</td><td>Sama di setiap cabang</td></tr>
-            <tr><td>Hambatan total</td><td>R<sub>total</sub> = R₁ + R₂ + ...</td><td>1/R<sub>total</sub> = 1/R₁ + 1/R₂ + ...</td></tr>
-            <tr><td>Jika satu komponen mati</td><td>Semua komponen berhenti</td><td>Cabang lain tetap berfungsi</td></tr>
-        </tbody>
-    </table>
+    <!-- SLIDE 4: Rangkaian Listrik (Seri & Paralel) -->
+    <div class="slide">
+        <h2>🔌 Rangkaian Listrik</h2>
+        <p>Dalam rangkaian <strong>seri</strong>, arus sama di semua komponen, tegangan terbagi. Dalam rangkaian <strong>paralel</strong>, tegangan sama di setiap cabang, arus terbagi sesuai hambatan.</p>
+        
+        <h3>Perbandingan Seri dan Paralel</h3>
+        <table>
+            <thead>
+                <tr><th>Karakteristik</th><th>Rangkaian Seri</th><th>Rangkaian Paralel</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Arus (I)</td><td>Sama di semua komponen</td><td>Terbagi sesuai hambatan</td></tr>
+                <tr><td>Tegangan (V)</td><td>Terbagi proporsional</td><td>Sama di setiap cabang</td></tr>
+                <tr><td>Hambatan total</td><td>R<sub>total</sub> = R₁ + R₂ + ...</td><td>1/R<sub>total</sub> = 1/R₁ + 1/R₂ + ...</td></tr>
+                <tr><td>Jika satu komponen rusak</td><td>Semua berhenti</td><td>Cabang lain tetap berfungsi</td></tr>
+            </tbody>
+        </table>
+    </div>
 
-    <h2>🧪 Induksi Elektromagnetik</h2>
-    <p>
-        Michael Faraday menemukan bahwa perubahan fluks magnetik dapat menghasilkan Gaya Gerak Listrik (GGL) induksi. 
-        Prinsip ini digunakan dalam generator, transformator, dan motor listrik. Hukum Lenz kemudian melengkapi arah arus induksi yang selalu melawan penyebabnya.
-    </p>
+    <!-- SLIDE 5: Induksi Elektromagnetik -->
+    <div class="slide">
+        <h2>🧲 Induksi Elektromagnetik</h2>
+        <p>Faraday menemukan bahwa perubahan fluks magnetik menghasilkan Gaya Gerak Listrik (GGL) induksi. Prinsip ini menjadi dasar generator, transformator, dan motor listrik. <strong>Hukum Lenz</strong> menyatakan arus induksi selalu melawan penyebabnya.</p>
+        <div class="figure">
+            <img src="inductor.jpeg" alt="Ilustrasi induktor" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x250?text=Induksi';">
+            <div class="figcaption">Prinsip induksi elektromagnetik pada kumparan</div>
+        </div>
+    </div>
 
-    <h2>📡 Persamaan Maxwell</h2>
-    <p>
-        James Clerk Maxwell menyatukan listrik, magnet, dan optik dalam empat persamaan terkenal. Persamaan ini meramalkan keberadaan gelombang elektromagnetik – cahaya, radio, sinar-X – yang merambat dengan kecepatan cahaya. Tanpa Maxwell, tidak akan ada ponsel, TV, atau internet nirkabel.
-    </p>
+    <!-- SLIDE 6: Persamaan Maxwell -->
+    <div class="slide">
+        <h2>📡 Persamaan Maxwell</h2>
+        <p>Empat persamaan Maxwell merangkum seluruh fenomena elektromagnetik. Persamaan ini meramalkan gelombang elektromagnetik (cahaya, radio, sinar-X) yang merambat dengan kecepatan cahaya. Tanpa Maxwell, tidak akan ada komunikasi nirkabel modern.</p>
+        <div class="figure">
+            <img src="jcm.jpg" alt="James Clerk Maxwell" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x250?text=Maxwell+Equation';">
+            <div class="figcaption">James Clerk Maxwell (1831–1879) – Bapak elektromagnetisme klasik</div>
+        </div>
+    </div>
 
-    <h2>💡 Aplikasi dalam Kehidupan Sehari-hari</h2>
-    <ul style="margin-left: 30px; margin-bottom: 20px;">
-        <li>Pembangkit listrik (PLTA, PLTU, PLTN) memanfaatkan induksi elektromagnetik.</li>
-        <li>Komponen elektronik seperti resistor, kapasitor, induktor menyusun sirkuit kompleks.</li>
-        <li>Sistem kelistrikan rumah tangga (stop kontak, sekering, MCB) melindungi dari arus berlebih.</li>
-        <li>Kendaraan listrik menggunakan motor DC/AC berdasarkan prinsip gaya Lorentz.</li>
-    </ul>
+    <!-- SLIDE 7: Aplikasi Sehari-hari -->
+    <div class="slide">
+        <h2>💡 Aplikasi dalam Kehidupan Sehari-hari</h2>
+        <ul>
+            <li>Pembangkit listrik (PLTA, PLTU, PLTN) memanfaatkan induksi elektromagnetik.</li>
+            <li>Komponen elektronik seperti resistor, kapasitor, induktor dalam rangkaian.</li>
+            <li>Sistem kelistrikan rumah tangga (stop kontak, MCB, sekering).</li>
+            <li>Kendaraan listrik & motor DC berdasarkan gaya Lorentz.</li>
+        </ul>
+        <div class="figure">
+            <img src="faraday.png" alt="Aplikasi listrik" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x200?text=Aplikasi+Listrik';">
+            <div class="figcaption">Dari eksperimen Faraday hingga teknologi modern</div>
+        </div>
+    </div>
 
-    <footer>
-        <p>© 2026 - Materi Fisika Listrik | Gambar: faraday.png, inductor.jpeg, jcm.jpg tersedia di folder yang sama.</p>
-        <p>Jika gambar tidak muncul, pastikan file gambar berada di direktori yang sama dengan file index.html dan penulisan nama file sesuai (case-sensitive).</p>
-    </footer>
-</div>
+    <!-- FOOTER / SLIDE PENUTUP -->
+    <div class="slide">
+        <footer>
+            <p>© 2026 - Materi Fisika Listrik | Gambar: faraday.png, inductor.jpeg, jcm.jpg tersedia di folder yang sama.</p>
+            <p><strong>Tips:</strong> Pastikan ketiga file gambar tersebut berada di direktori yang sama dengan file index.html, dan perhatikan huruf besar/kecil (case-sensitive).</p>
+        </footer>
+    </div>
 </body>
 </html>
