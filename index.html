@@ -439,7 +439,6 @@
             background-color: #0f172a;
         }
 
-        /* Gaya untuk soal latihan di slide terpisah */
         .soal-latihan-container {
             width: 100%;
             max-width: 900px;
@@ -504,7 +503,7 @@
         </div>
     </div>
 
-    <!-- SLIDE 4: Contoh Soal Faraday -->
+    <!-- SLIDE 4: Contoh Soal Faraday (dengan MathML) -->
     <div class="slide-container" id="slide4">
         <h2 class="slide-title">Contoh Soal: Hukum Faraday</h2>
         <div class="content-area" style="justify-content: flex-start; overflow-y: auto; padding-right: 10px;">
@@ -515,8 +514,8 @@
                     </thead>
                     <tbody>
                         <tr><td>Jumlah Lilitan (N)</td><td>50 lilitan</td></tr>
-                        <tr><td>Perubahan Fluks (&Delta;&Phi;)</td><td>5 x 10<sup>-3</sup> Weber</td></tr>
-                        <tr><td>Selang Waktu (&Delta;t)</td><td>10 ms (0.01 s)</td></tr>
+                        <tr><td>Perubahan Fluks (ΔΦ)</td><td>5 x 10<sup>-3</sup> Weber</td></tr>
+                        <tr><td>Selang Waktu (Δt)</td><td>10 ms (0.01 s)</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -526,7 +525,33 @@
             </div>
             <div class="tile solution-content" id="solusiContoh4" style="margin-top: 20px;">
                 <h3>Penyelesaian:</h3>
-                <p>&epsilon; = -N (&Delta;&Phi; / &Delta;t) = -50 (5 x 10<sup>-3</sup> / 0.01) = <strong>-25 Volt</strong></p>
+                <div class="formula-container">
+                    <math>
+                        <mi>ε</mi>
+                        <mo>=</mo>
+                        <mo>−</mo>
+                        <mi>N</mi>
+                        <mfrac>
+                            <mrow><mi>Δ</mi><mi>Φ</mi></mrow>
+                            <mrow><mi>Δ</mi><mi>t</mi></mrow>
+                        </mfrac>
+                        <mo>=</mo>
+                        <mo>−</mo>
+                        <mn>50</mn>
+                        <mrow>
+                            <mo>(</mo>
+                            <mfrac>
+                                <mrow><mn>5</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow>
+                                <mn>0.01</mn>
+                            </mfrac>
+                            <mo>)</mo>
+                        </mrow>
+                        <mo>=</mo>
+                        <mo>−</mo>
+                        <mn>25</mn>
+                        <mtext> Volt</mtext>
+                    </math>
+                </div>
                 <p><small>*Tanda negatif menunjukkan arah berdasarkan hukum Lenz.</small></p>
             </div>
         </div>
@@ -574,7 +599,7 @@
         </div>
     </div>
 
-    <!-- SLIDE 8: Contoh Soal Induktansi Diri -->
+    <!-- SLIDE 8: Contoh Soal Induktansi Diri (MathML) -->
     <div class="slide-container" id="slide8">
         <h2 class="slide-title">Contoh Soal: Induktansi Diri</h2>
         <div class="content-area" style="justify-content: flex-start; overflow-y: auto; padding-right: 10px;">
@@ -588,7 +613,30 @@
                 </div>
                 <div class="tile solution-content" id="solusiContoh8" style="margin-top:20px;">
                     <h3>Hasil Perhitungan:</h3>
-                    <p>&epsilon; = -L (&Delta;I / &Delta;t) = -2 ((2-10)/0.1) = -2(-80) = <strong>160 Volt</strong></p>
+                    <div class="formula-container">
+                        <math>
+                            <mi>ε</mi>
+                            <mo>=</mo>
+                            <mo>−</mo>
+                            <mi>L</mi>
+                            <mfrac>
+                                <mrow><mi>Δ</mi><mi>I</mi></mrow>
+                                <mrow><mi>Δ</mi><mi>t</mi></mrow>
+                            </mfrac>
+                            <mo>=</mo>
+                            <mo>−</mo>
+                            <mn>2</mn>
+                            <mfrac>
+                                <mrow><mn>2</mn><mo>−</mo><mn>10</mn></mrow>
+                                <mn>0.1</mn>
+                            </mfrac>
+                            <mo>=</mo>
+                            <mo>−</mo><mn>2</mn><mo>(</mo><mo>−</mo><mn>80</mn><mo>)</mo>
+                            <mo>=</mo>
+                            <mn>160</mn>
+                            <mtext> Volt</mtext>
+                        </math>
+                    </div>
                 </div>
             </div>
         </div>
@@ -670,7 +718,6 @@
                 <p>Sebuah bidang datar memiliki luas <strong>200 cm²</strong> berada dalam medan magnet homogen sebesar <strong>0,05 T</strong>.</p>
                 <p>a. Hitung fluks magnetik yang menembus bidang jika bidang <strong>tegak lurus</strong> terhadap garis medan magnet.</p>
                 <p>b. Hitung fluks magnetik yang menembus bidang jika bidang membentuk sudut <strong>60°</strong> terhadap garis medan magnet.</p>
-                </div>
             </div>
         </div>
     </div>
@@ -683,31 +730,50 @@
                 <p style="font-size: 24px; margin-bottom: 20px;"><strong>Soal 5</strong></p>
                 <p>Fluks magnetik yang dilingkupi sebuah kumparan berkurang dari <strong>0,08 Wb</strong> menjadi <strong>0,02 Wb</strong> dalam waktu <strong>0,1 sekon</strong>.</p>
                 <p>Kumparan tersebut memiliki <strong>200 lilitan</strong>. Hitunglah GGL induksi rata-rata yang timbul pada ujung-ujung kumparan!</p>
-                </div>
             </div>
         </div>
     </div>
 
-    <!-- SLIDE 15: Kunci Jawaban Lengkap (Soal 12, 13, 14) -->
+    <!-- SLIDE 15: Kunci Jawaban Lengkap (dengan MathML) -->
     <div class="slide-container" id="slide15">
         <h2 class="slide-title">Kunci Jawaban Latihan Soal</h2>
         <div class="content-area" style="justify-content: flex-start; overflow-y: auto;">
             <div class="tile" style="margin-bottom: 30px;">
                 <h3>📌 Slide 12 - Soal 1, 2, 3</h3>
-                <p><strong>Soal 1:</strong> ε = N·ΔΦ/Δt = 100 × (0,04 / 0,2) = <strong>20 V</strong></p>
-                <p><strong>Soal 2:</strong> ε = L·|ΔI|/Δt = 3 × (6 / 0,1) = <strong>180 V</strong></p>
+                <p><strong>Soal 1:</strong> 
+                    <math display="inline">
+                        <mi>ε</mi><mo>=</mo><mi>N</mi><mfrac><mrow><mi>Δ</mi><mi>Φ</mi></mrow><mrow><mi>Δ</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mn>100</mn><mo>×</mo><mfrac><mrow><mn>0</mn><mo>.</mo><mn>04</mn></mrow><mrow><mn>0</mn><mo>.</mo><mn>2</mn></mrow></mfrac><mo>=</mo><mn>20</mn><mtext> V</mtext>
+                    </math>
+                </p>
+                <p><strong>Soal 2:</strong> 
+                    <math display="inline">
+                        <mi>ε</mi><mo>=</mo><mi>L</mi><mfrac><mrow><mo>|</mo><mi>Δ</mi><mi>I</mi><mo>|</mo></mrow><mrow><mi>Δ</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mn>3</mn><mo>×</mo><mfrac><mrow><mn>6</mn></mrow><mrow><mn>0</mn><mo>.</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mn>180</mn><mtext> V</mtext>
+                    </math>
+                </p>
                 <p><strong>Soal 3:</strong> Medan listrik (E) dan medan magnet (B). Keempat persamaan Maxwell: Hukum Gauss listrik, Hukum Gauss magnet, Hukum Faraday, Hukum Ampere-Maxwell.</p>
             </div>
             <div class="tile" style="margin-bottom: 30px;">
                 <h3>📌 Slide 13 - Soal 4 (Fluks Magnetik)</h3>
                 <p><strong>Diketahui:</strong> A = 200 cm² = 0,02 m², B = 0,05 T</p>
-                <p>a. Tegak lurus (θ = 0°) → Φ = B·A = 0,05 × 0,02 = <strong>0,001 Wb</strong></p>
-                <p>b. Sudut 60° terhadap garis medan → θ = 60° → cos 60° = 0,5 → Φ = 0,05 × 0,02 × 0,5 = <strong>0,0005 Wb</strong></p>
+                <p>a. Tegak lurus (θ = 0°) → 
+                    <math display="inline">
+                        <mi>Φ</mi><mo>=</mo><mi>B</mi><mo>·</mo><mi>A</mi><mo>=</mo><mn>0</mn><mo>.</mo><mn>05</mn><mo>×</mo><mn>0</mn><mo>.</mo><mn>02</mn><mo>=</mo><mn>0</mn><mo>.</mo><mn>001</mn><mtext> Wb</mtext>
+                    </math>
+                </p>
+                <p>b. Sudut 60° terhadap garis medan → θ = 60°, cos 60° = 0,5 → 
+                    <math display="inline">
+                        <mi>Φ</mi><mo>=</mo><mn>0</mn><mo>.</mo><mn>05</mn><mo>×</mo><mn>0</mn><mo>.</mo><mn>02</mn><mo>×</mo><mn>0</mn><mo>.</mo><mn>5</mn><mo>=</mo><mn>0</mn><mo>.</mo><mn>0005</mn><mtext> Wb</mtext>
+                    </math>
+                </p>
             </div>
             <div class="tile">
                 <h3>📌 Slide 14 - Soal 5 (GGL Induksi Faraday)</h3>
                 <p><strong>Diketahui:</strong> Φ₁ = 0,08 Wb, Φ₂ = 0,02 Wb, Δt = 0,1 s, N = 200</p>
-                <p>|ΔΦ| = 0,06 Wb<br>ε = N·|ΔΦ|/Δt = 200 × (0,06 / 0,1) = <strong>120 V</strong></p>
+                <p>|ΔΦ| = 0,06 Wb<br>
+                    <math display="inline">
+                        <mi>ε</mi><mo>=</mo><mi>N</mi><mfrac><mrow><mo>|</mo><mi>Δ</mi><mi>Φ</mi><mo>|</mo></mrow><mrow><mi>Δ</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mn>200</mn><mo>×</mo><mfrac><mrow><mn>0</mn><mo>.</mo><mn>06</mn></mrow><mrow><mn>0</mn><mo>.</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mn>120</mn><mtext> V</mtext>
+                    </math>
+                </p>
                 <p><small>Tanda negatif diabaikan karena hanya menunjukkan arah (Hukum Lenz).</small></p>
             </div>
             <div class="section-title-layout" style="margin-top: 30px;">
@@ -760,18 +826,6 @@
             const toggleContoh8 = document.getElementById('toggleContoh8');
             const solusiContoh8 = document.getElementById('solusiContoh8');
             if (toggleContoh8 && solusiContoh8) toggleContoh8.addEventListener('change', () => solusiContoh8.classList.toggle('show', toggleContoh8.checked));
-
-            const toggleKunci = document.getElementById('toggleKunci123');
-            const kunci123 = document.getElementById('kunci123');
-            if (toggleKunci && kunci123) toggleKunci.addEventListener('change', () => kunci123.classList.toggle('show', toggleKunci.checked));
-
-            const toggleSoal4 = document.getElementById('toggleSoal4');
-            const solusiSoal4 = document.getElementById('solusiSoal4');
-            if (toggleSoal4 && solusiSoal4) toggleSoal4.addEventListener('change', () => solusiSoal4.classList.toggle('show', toggleSoal4.checked));
-
-            const toggleSoal5 = document.getElementById('toggleSoal5');
-            const solusiSoal5 = document.getElementById('solusiSoal5');
-            if (toggleSoal5 && solusiSoal5) toggleSoal5.addEventListener('change', () => solusiSoal5.classList.toggle('show', toggleSoal5.checked));
         });
     </script>
 </body>
